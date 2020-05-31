@@ -1,0 +1,322 @@
+/** Design Note **/
+:root {
+	--font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+/****** Typography ******/
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size:16px;
+	line-height: 20px;
+	color:#413C40;
+}
+a, a:hover {
+	text-decoration: none;
+	color:#413C40;
+}
+p {
+	font-size: 14px;
+	line-height:16px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	margin:0;
+	padding:0;
+}
+h1 {
+	font-weight: 800;
+	font-size: 90px;
+	line-height: 120px;
+}
+h2 {
+
+}
+
+/****** preloader Style ******/
+
+.loader {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	z-index: 9;
+	text-align: center;
+    line-height: 100%;
+    padding-top: 30vh;
+background: #7F7FD5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 30vh;
+  opacity: 1;
+}
+.loader span {
+  display: inline-block;
+  -webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+          animation: pulse 0.4s alternate infinite ease-in-out;
+}
+.loader span:nth-child(odd) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+
+/****** Common Style ******/
+section, .section {
+	padding: 40px 0;
+}
+
+/****** header ******/
+.logo img {
+	max-width: 150px;
+}
+.main-menu-icon a {
+	padding-top: 8px;
+	display: block;
+}
+#hero-section {
+	padding-bottom: 0;
+}
+#hero-section h1 {
+	text-transform: uppercase;
+	font-size: 50px;
+	margin-left: 5px;
+	line-height: 60px;
+}
+#hero-section h1::first-letter {
+    margin-left: -8px;
+}
+#hero-section p {
+	font-size: 16px;
+	line-height: 24px;
+	color: #969696;
+	font-weight: 200;
+}
+
+/****** POPout CV ******/
+#my-resume-section {
+	background: #413c40;
+	display: block;
+	overflow: hidden;
+	box-shadow: 0px 0px 5px 0px #000 inset;
+}
+.my-resume {
+	margin-top: -999px;
+	transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-top: 40px;
+}
+.my-resume.active {
+	margin-top: 0px;
+}
+.my-resume-photo .rounded-circle {
+	max-width: 200px;
+}
+.resume-intro {
+	color:#aeadae;
+}
+.resume-intro h2 {
+	font-size: 40px;
+	font-weight: normal;
+}
+.resume-intro h2 > span {
+	color: #fff;
+	font-weight: 600;
+}
+.resume-intro h3 {
+	font-size: 18px;
+	font-weight: 300;
+}
+.resume-intro > p {
+	margin-top: 40px;
+	text-align: left;
+	margin-bottom: 0;
+}
+.my-skills {
+	padding: 40px 0;
+}
+.single-skill {
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+}
+.single-skill h2 {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.single-skill .skill-process {
+	background: #000;
+	height: 4px;
+	width: 100%;
+	display: block;
+	margin-top: 15px;
+}
+.single-skill .skill-process > span {
+	background: #fff;
+	height: 100%;
+	width: 47%;
+	display: block;
+}
+
+/****** footer ******/
+#footer-section {
+	padding-bottom: 0;
+	background: #F2FBFC;
+}
+#footer-section .row > div > * {
+  margin: 20px 0;
+}
+#footer-section .contact-text {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	color: #969696;
+}
+#footer-section .contact-text a {
+	font-weight: 600;
+}
+#footer-section .social-links {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#footer-section .social-links li {
+	display: inline-block;
+	margin-left: 10%;
+}
+#footer-section .social-links li:first-child {
+	margin-left:0;
+}
+#footer-section .social-links li a{
+	font-weight:600;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+#footer-section::after {
+	content: " ";
+	display: block;
+	width: 1px;
+	height: 100px;
+	background: #000;
+	margin: 0px auto;
+	margin-top: 40px;
+}
+
+/*Portfolio*/
+
+.my-works {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 400;
+	border: 2px solid #413c40;
+	display: block;
+	width: 230px;
+	text-align: left;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+.single-portfolio img {
+  max-width: 100%;
+  border: 4px solid #413c40;
+}
+.portfolio-info {
+	background: #413c40;
+	padding: 5px 10px;
+	color: #fff;
+	height: 80px;
+}
+.portfolio-info h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+.portfolio-info p {
+	font-size: 14px;
+	line-height: 16px;
+	width: 80%;
+}
+.portfolio-info a {
+	color: #fff;
+	border: 1px solid #2e9586;
+	margin: 10px 0;
+	display: block;
+	width: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 2px 8px;
+	float: right;
+	margin-top: -28px;
+}
+.portfolio-info a:hover {
+	border-color: #187568;
+}
+/*contact form*/
+.title-text {
+	margin-top: 20px !important;
+	margin-bottom: 50px !important;
+	position: relative;
+	z-index: 1;
+}
+.title-text h1 {
+	text-transform: uppercase;
+	color: #d5ecee;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 75%;
+	transform: translateY(-50%);
+	z-index: -1;
+}
+.title-text h2 {
+	font-size: 32px;
+	line-height: 40px;
+	color: #413c40;
+}
+.title-text h3 {
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+#contact-form {
+	margin: 30px auto !important;
+	display: block;
+	max-width: 500px;
+}
+
+.mailResponds, .mailError {
+	display: inline-block;
+	padding: 7px 10px;
+	border: 1px solid #4cc84c;
+	margin-left: 10px;
+	color: #4cc84c;
+}
+.hide {
+	display: none;
+}
+
+.mailError {
+	border-color: #fb7171;
+	color: #fb7171;
+}
