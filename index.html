@@ -12,17 +12,27 @@ layout: default
   </div>
 </section><!-- End of #here-section -->
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<section id="blogs-section" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div id="blog-view">
+          <h2 class="my-works">Recent works</h2>
+          <div class="row">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            {% for post in site.posts %}
+              <div class="col-md-6 mb-4 single-post">
+                <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                <div class="entry">
+                  {{ post.excerpt }}
+                </div>
+                <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+              </div> <!-- End of .single-portfolio -->
+            {% endfor %}
 
-      <div class="entry">
-        {{ post.excerpt }}
+          </div>
+        </div>
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    </div>
+  </div>
+</section>
