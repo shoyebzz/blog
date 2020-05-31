@@ -102,7 +102,7 @@
           <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
             <div class="row">
               <div class="col-6 logo">
-                <a href=""><!-- <h2>M. Rahman</h2> --><img src="{{ site.baseurl }}/assets/images/logo.png" alt="Mashiur Rahman's Professional Portfolio Logo"></a>
+                <a href="{{ site.baseurl }}/"><!-- <h2>M. Rahman</h2> --><img src="{{ site.baseurl }}/assets/images/logo.png" alt="Mashiur Rahman's Professional Portfolio Logo"></a>
               </div>
               <div class="col-6 main-menu-icon text-right">
                 <a id="resume-caller" href=""><img src="{{ site.baseurl }}/assets/images/menu-icon.png" alt="CV"></a>
@@ -113,16 +113,6 @@
       </div>
     </header><!-- End of #header-section -->
 
-    <section id="hero-section" class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 text-left">
-            <h1>hello,</h1>
-            <p>I'm Mashiur, <br>Working since 2013 and experienced in developing high-quality WebApp / Website for all types of businesses. Providing quality and effective service is the first priority of mine, I am strongly determined in client satisfaction and brings the best solution in terms of both sides benefits.</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End of #here-section -->
 
     <!-- <div class="wrapper-masthead">
       <div class="container">
@@ -143,21 +133,7 @@
     </div> -->
 
     <div id="main" role="main" class="container">
-      <!-- {{ content }} -->
-      <div class="posts">
-        {% for post in site.posts %}
-          <article class="post">
-      
-            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      
-            <div class="entry">
-              {{ post.excerpt }}
-            </div>
-      
-            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-          </article>
-        {% endfor %}
-      </div>
+      {{ content }}
     </div>
 
     <footer id="footer-section" class="section">
